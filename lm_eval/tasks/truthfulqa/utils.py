@@ -18,8 +18,8 @@ def process_results_mc2(doc, results):
 
 
 def process_docs_gen(dataset: datasets.Dataset) -> datasets.Dataset:
+    dataset = dataset.shuffle(seed=42) # Vera: 2024-03-29 : shuffle the dataset to save time, this is not beatiful but it works
     return dataset.map(preprocess_function)
-
 
 def preprocess_function(examples):
     def _format_answers(answers):

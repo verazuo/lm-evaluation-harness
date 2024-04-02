@@ -15,7 +15,7 @@ process_docs: !function utils.process_docs
 doc_to_text: inputs
 doc_to_target: "{{targets[0]}}"
 generation_kwargs:
-  max_gen_toks: 128
+  max_gen_toks: 256
 metric_list:
   - metric: exact_match
     aggregation: mean
